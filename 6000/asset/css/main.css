@@ -948,7 +948,8 @@ body {
   border-radius: 45px;
   border: 2px solid #fa6839;
   background-color: #fff;
-  overflow: hidden; }
+  overflow: hidden;
+  text-decoration: none; }
   .bonus-title {
     flex: 0 0 auto;
     display: flex;
@@ -960,22 +961,22 @@ body {
     flex: 1;
     display: flex;
     align-items: center;
-    padding: 12px 25px 12px 30px; }
+    padding: 12px 25px 12px 30px;
+    color: #333; }
     .bonus-content p {
       flex: 1; }
-    .bonus-content a {
+    .bonus-content .smBtn {
       margin-left: 10px;
       padding: 2px 15px 5px;
       font-size: 16px;
       color: #fff;
-      text-decoration: none;
       border-radius: 16px;
       background-color: #fa6839; }
   @media only screen and (min-width: 1181px) {
-    .bonus-content a {
+    .bonus {
       transition: .3s; }
-      .bonus-content a:hover {
-        transform: translateY(-6px); } }
+      .bonus:hover {
+        transform: translateY(-10px); } }
   @media only screen and (max-width: 1023px) {
     .bonus {
       font-size: 16px; }
@@ -983,7 +984,7 @@ body {
         padding: 8px 25px; }
       .bonus-content {
         padding: 8px 25px; }
-        .bonus-content a {
+        .bonus-content .smBtn {
           font-size: 15px; } }
   @media only screen and (max-width: 767px) {
     .bonus {
@@ -994,7 +995,7 @@ body {
         padding: 10px; }
       .bonus-content {
         padding: 10px; }
-        .bonus-content a {
+        .bonus-content .smBtn {
           padding: 2px 8px 5px;
           margin-left: 5px;
           font-size: 13px; } }
