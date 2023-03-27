@@ -100,10 +100,15 @@ $(function () {
 
   new Swiper('[data-slider="gift"]', {
     slidesPerView: 'auto',
+    loop: false,
     spaceBetween: 45,
     centeredSlides: false,
     allowTouchMove: false,
     simulateTouch: false,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
     pagination: {
       el: '.swiper-pagination',
       enabled: true,
@@ -112,6 +117,7 @@ $(function () {
     breakpoints: {
       1023: {
         slidesPerView: 'auto',
+        loop: false,
         spaceBetween: 20,
         centeredSlides: false,
         allowTouchMove: false,
@@ -119,10 +125,24 @@ $(function () {
       },
       767: {
         slidesPerView: 'auto',
+        loop: true,
         spaceBetween: 17,
         centeredSlides: true,
         allowTouchMove: true,
         simulateTouch: true
+      }
+    },
+    on: {
+      resize: function resize() {
+        if (Modernizr.mq('(max-width: 767px)')) {
+          this.loopCreate();
+          this.updateSlides();
+          this.slideToLoop(0);
+        } else {
+          this.loopDestroy();
+          this.updateSlides();
+          this.slideTo(0);
+        }
       }
     }
   }); // 收合
