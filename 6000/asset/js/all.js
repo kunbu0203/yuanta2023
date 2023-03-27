@@ -98,7 +98,7 @@ $(function () {
     });
   }
 
-  new Swiper('[data-slider="gift"]', {
+  var giftSwiper = new Swiper('[data-slider="gift"]', {
     slidesPerView: 'auto',
     loop: false,
     spaceBetween: 45,
@@ -145,7 +145,8 @@ $(function () {
         }
       }
     }
-  }); // 收合
+  });
+  giftSwiper.autoplay.stop(); // 收合
 
   $('[data-collapse-action]').on('click', function (e) {
     e.preventDefault();
@@ -273,17 +274,34 @@ $(function () {
       start: 'top 80%'
     }
   });
-  gsap.set('.gift-item', {
+  var tl = gsap.timeline();
+  gsap.set('.gift-item.swiper-slide-prev', {
     y: '50%'
   });
-  gsap.to('.gift-item', {
+  gsap.set('.gift-item:not(.swiper-slide-duplicate)', {
+    y: '50%'
+  });
+  tl.to('.gift-item.swiper-slide-prev', {
     duration: 0.8,
     y: 0,
     opacity: 1,
-    stagger: 0.3,
     scrollTrigger: {
       trigger: '.block.-discount .block-wrap',
       start: 'top 80%'
     }
+  }).to('.gift-item:not(.swiper-slide-duplicate)', {
+    duration: 0.8,
+    y: 0,
+    opacity: 1,
+    stagger: 0.3
+  }, '<0.3').call(autoPlayStart, null, '<');
+  ScrollTrigger.create({
+    animation: tl,
+    trigger: '.block.-discount .block-wrap',
+    start: 'top 80%'
   });
+
+  function autoPlayStart() {
+    giftSwiper.autoplay.start();
+  }
 });

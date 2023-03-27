@@ -1147,6 +1147,10 @@ body {
       display: block;
       height: 43px;
       background: url(../images/background/gift.png) no-repeat center bottom/contain; }
+    .gift-item:not(.swiper-slide-duplicate) {
+      opacity: 0; }
+    .gift-item.swiper-slide-prev {
+      opacity: 0; }
   .gift-card {
     box-sizing: border-box;
     display: flex;
@@ -1194,6 +1198,9 @@ body {
     font-size: 24px;
     color: #fa6839;
     text-align: center; }
+  @media only screen and (min-width: 768px) {
+    .gift .swiper-wrapper {
+      transform: none !important; } }
   @media only screen and (max-width: 1023px) {
     .gift {
       margin-right: -20px; }
