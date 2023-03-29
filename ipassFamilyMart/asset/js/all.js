@@ -61,10 +61,10 @@ $(function () {
     x: '41.5%',
     ease: 'power1.out'
   });
-  gsap.set('.banner-wording', {
+  gsap.set('.banner-wording img', {
     y: '20%'
   });
-  gsap.to('.banner-wording', {
+  gsap.to('.banner-wording img', {
     duration: 1,
     delay: 0.7,
     y: 0,
