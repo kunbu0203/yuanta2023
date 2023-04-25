@@ -159,8 +159,12 @@ $(function () {
     }
   });
 
-  function autoPlayStart() {
+  function done() {
     discountSwiper.autoplay.start();
+    setTimeout(function () {
+      $('.discount').css('opacity', '1');
+      $('.discount-item').css('opacity', '1');
+    }, 3000);
   }
 
   var tl = gsap.timeline();
@@ -178,7 +182,7 @@ $(function () {
       duration: 0.6,
       y: 0,
       opacity: 1
-    }).call(autoPlayStart, null, '<');
+    }).call(done, null, '<');
   } else {
     gsap.set('.discount-item', {
       y: '50%'
@@ -188,7 +192,7 @@ $(function () {
       y: 0,
       opacity: 1,
       stagger: 0.3
-    }, '<0.3').call(autoPlayStart, null, '<');
+    }, '<0.3').call(done, null, '<');
   }
 
   gsap.set('.new-item.-left', {
