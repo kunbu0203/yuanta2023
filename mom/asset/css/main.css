@@ -1040,11 +1040,10 @@ body {
   .discount-item {
     flex: 0 0 auto;
     width: calc((100%/4) - 35px);
-    margin-top: 55px; }
+    margin-top: 55px;
+    opacity: 0; }
     .discount-item:nth-child(-n+4) {
       margin-top: 0; }
-    .discount-item:not(.swiper-slide-duplicate) {
-      opacity: 0; }
   @media only screen and (max-width: 1279px) {
     .discount {
       margin-right: -20px; }
@@ -1071,9 +1070,8 @@ body {
         flex-wrap: nowrap; }
       .discount-item {
         width: 240px;
-        margin-top: 0; }
-        .discount-item:not(.swiper-slide-duplicate) {
-          opacity: 1; }
+        margin-top: 0;
+        opacity: 1; }
         .discount-item:nth-child(-n+4) {
           margin-top: 0; } }
 
