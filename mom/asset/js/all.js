@@ -100,17 +100,17 @@ $(function () {
   }); // 進場
 
   gsap.registerPlugin(ScrollTrigger);
-  gsap.set('.banner-phone img', {
-    y: '10%'
+  gsap.set('.banner-phone', {
+    y: 70
   });
-  gsap.to('.banner-phone img', {
+  gsap.to('.banner-phone', {
     duration: 1.2,
     y: 0,
     opacity: 1,
     ease: 'back.out(1.8)'
   });
   gsap.set('.banner-man img, .banner-woman img', {
-    y: '10%'
+    y: 60
   });
   gsap.to('.banner-man img, .banner-woman img', {
     duration: 1.2,
@@ -120,7 +120,7 @@ $(function () {
     ease: 'back.out(1.8)'
   });
   gsap.set('.giftCard.-left', {
-    x: '-40%'
+    x: -100
   });
   gsap.to('.giftCard.-left', {
     duration: 0.6,
@@ -133,7 +133,7 @@ $(function () {
     }
   });
   gsap.set('.giftCard.-right', {
-    x: '40%'
+    x: 100
   });
   gsap.to('.giftCard.-right', {
     duration: 0.6,
@@ -146,7 +146,7 @@ $(function () {
     }
   });
   gsap.set('.giftCard.-hor', {
-    y: '40%'
+    y: 100
   });
   gsap.to('.giftCard.-hor', {
     duration: 0.6,
@@ -176,7 +176,7 @@ $(function () {
 
   if (Modernizr.mq('(max-width: 767px)')) {
     gsap.set('.discount', {
-      y: '50%'
+      y: 120
     });
     tl.to('.discount', {
       duration: 0.6,
@@ -185,7 +185,7 @@ $(function () {
     }).call(done, null, '<');
   } else {
     gsap.set('.discount-item', {
-      y: '50%'
+      y: 120
     });
     tl.to('.discount-item', {
       duration: 0.6,
@@ -196,7 +196,7 @@ $(function () {
   }
 
   gsap.set('.new-item.-left', {
-    x: '-40%'
+    x: -100
   });
   gsap.to('.new-item.-left', {
     duration: 0.6,
@@ -209,7 +209,7 @@ $(function () {
     }
   });
   gsap.set('.new-item.-right', {
-    x: '40%'
+    x: 100
   });
   gsap.to('.new-item.-right', {
     duration: 0.6,
