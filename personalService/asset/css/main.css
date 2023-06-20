@@ -423,6 +423,18 @@ body {
   100% {
     transform: rotate(-3deg); } }
 
+@-webkit-keyframes heart {
+  0% {
+    transform: rotate(10deg); }
+  100% {
+    transform: rotate(-10deg); } }
+
+@keyframes heart {
+  0% {
+    transform: rotate(10deg); }
+  100% {
+    transform: rotate(-10deg); } }
+
 @-webkit-keyframes girl {
   0% {
     transform: rotate(3deg); }
@@ -505,6 +517,16 @@ body {
     transform-origin: bottom center;
     -webkit-animation: line .9s ease-in-out infinite alternate;
             animation: line .9s ease-in-out infinite alternate; }
+  .banner-heart {
+    top: 60.15936%;
+    width: 2.66904%;
+    transform-origin: bottom center;
+    -webkit-animation: heart .5s ease-in-out infinite alternate;
+            animation: heart .5s ease-in-out infinite alternate; }
+    .banner-heart.-l {
+      right: 40.92527%; }
+    .banner-heart.-r {
+      right: 20.81851%; }
   .banner-main {
     bottom: 0;
     left: 52%;
@@ -587,6 +609,12 @@ body {
         top: -25.36232%;
         left: 2.64706%;
         width: 20.58824%; }
+      .banner-heart {
+        top: 62.31884%; }
+        .banner-heart.-l {
+          right: 40.88235%; }
+        .banner-heart.-r {
+          right: 20.73529%; }
       .banner-main {
         left: 56%;
         width: 58.66667%; } }
@@ -726,6 +754,9 @@ body {
     text-align: center; }
     .block-text.-noGap {
       margin-top: 0; }
+    .block-text p {
+      margin-top: 16px;
+      font-size: 14px; }
   .block.-coverB {
     padding-bottom: 0; }
     .block.-coverB::after {
@@ -790,6 +821,9 @@ body {
         margin-top: 40px; }
         .block-text img {
           height: 32px; }
+        .block-text p {
+          margin-top: 10px;
+          font-size: 12px; }
       .block.-coverB + .block {
         padding-top: calc(60px + 8.33333vw); } }
   @media only screen and (max-width: 767px) {
@@ -806,7 +840,7 @@ body {
       .block-text {
         margin-top: 10px; }
         .block-text img {
-          height: 26px; }
+          height: 27px; }
       .block.-coverB {
         padding-bottom: 30px; } }
 
@@ -1312,7 +1346,8 @@ ol {
         .tab-nav a.-active::after {
           height: 3px; }
     .tab-slider {
-      max-width: 460px; } }
+      max-width: 460px;
+      background-image: url(../images/tab/taiwan-mb.png); } }
 
 .swiper {
   overflow: hidden; }
